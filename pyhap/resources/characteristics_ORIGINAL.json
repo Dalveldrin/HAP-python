@@ -214,7 +214,7 @@
       "UUID": "000000CE-0000-1000-8000-0026BB765291",
       "maxValue": 500,
       "minStep": 1,
-      "minValue": 50
+      "minValue": 140
    },
    "ConfiguredName": {
       "Format": "string",

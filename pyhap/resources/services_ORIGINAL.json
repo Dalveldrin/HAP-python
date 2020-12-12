@@ -310,40 +310,6 @@
          "Hue",
          "Saturation",
          "Name"
-         
-      ],
-      "RequiredCharacteristics": [
-         "On"
-      ],
-      "UUID": "00000043-0000-1000-8000-0026BB765291"
-   },
-   "LightbulbDimmed": {
-      "OptionalCharacteristics": [
-         "Brightness",
-         "Name"
-         
-      ],
-      "RequiredCharacteristics": [
-         "On"
-      ],
-      "UUID": "00000043-0000-1000-8000-0026BB765291"
-   },
-   "LightbulbSwitched": {
-      "OptionalCharacteristics": [
-         "Name",
-         "Identifier"
-      ],
-      "RequiredCharacteristics": [
-         "On"
-      ],
-      "UUID": "00000043-0000-1000-8000-0026BB765291"
-   },
-   "LightbulbCT": {
-      "OptionalCharacteristics": [
-         "Brightness",
-         "ColorTemperature",
-         "Name"
-         
       ],
       "RequiredCharacteristics": [
          "On"

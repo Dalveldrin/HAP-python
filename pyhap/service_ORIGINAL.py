@@ -1,6 +1,5 @@
 """This module implements the HAP Service."""
 from uuid import UUID
-from pyhap.characteristic import Characteristic
 
 from pyhap.const import (
     HAP_REPR_CHARS, HAP_REPR_IID,
@@ -48,7 +47,7 @@ class Service:
                 char.service = self
                 self.characteristics.append(char)
 
-    def get_characteristic(self, name) -> Characteristic:
+    def get_characteristic(self, name):
         """Return a Characteristic object by the given name from this Service.
 
         :param name: The name of the characteristic to search for.
@@ -113,7 +112,5 @@ class Service:
         type_id = UUID(json_dict.pop('UUID'))
         service = cls(type_id, name)
         for char_name in json_dict['RequiredCharacteristics']:
-            service.add_characteristic(loader.get_char(char_name))
-        for char_name in json_dict["OptionalCharacteristics"]:
             service.add_characteristic(loader.get_char(char_name))
         return service

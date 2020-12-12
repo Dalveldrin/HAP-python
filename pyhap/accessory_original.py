@@ -8,7 +8,6 @@ from pyhap.const import (
     STANDALONE_AID, HAP_REPR_AID, HAP_REPR_IID, HAP_REPR_SERVICES,
     HAP_REPR_VALUE, CATEGORY_OTHER, CATEGORY_BRIDGE)
 from pyhap.iid_manager import IIDManager
-from pyhap.service import Service
 
 if SUPPORT_QR_CODE:
     import base36
@@ -28,7 +27,7 @@ class Accessory:
 
     category = CATEGORY_OTHER
 
-    def __init__(self, driver, display_name, aid=None, *args, **kwargs):
+    def __init__(self, driver, display_name, aid=None):
         """Initialise with the given properties.
 
         :param display_name: Name to be displayed in the Home app.
@@ -110,7 +109,7 @@ class Accessory:
                     "Couldn't add SerialNumber for %s. The SerialNumber must "
                     "be at least one character long.", self.display_name)
 
-    def add_preload_service(self, service, chars=None) -> Service:
+    def add_preload_service(self, service, chars=None):
         """Create a service with the given name and add it to this acc."""
         service = self.driver.loader.get_service(service)
         if chars:
